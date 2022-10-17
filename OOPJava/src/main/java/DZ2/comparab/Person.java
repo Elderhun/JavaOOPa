@@ -1,4 +1,4 @@
-package DZ2.comparator;
+package DZ2.comparab;
 
 import java.util.ArrayList;
 import java.util.Collections;
