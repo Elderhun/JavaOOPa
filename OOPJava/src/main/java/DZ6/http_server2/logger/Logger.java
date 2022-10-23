@@ -1,4 +1,4 @@
-package DZ5.http_server.logger;
+package DZ6.http_server2.logger;
 
 public interface Logger {
 

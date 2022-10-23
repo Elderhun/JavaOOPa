@@ -1,12 +1,10 @@
-package DZ5.http_server;
+package DZ6.http_server2;
 
 import java.io.*;
-import java.net.Socket;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 import java.util.function.BiConsumer;
 import java.util.function.Predicate;
 
@@ -24,14 +22,14 @@ public class IoProcessors extends Thread {
 
 
 
-//            Files::notExists,
-//            (Path, writer) -> {
-//                    writer.println("HTTP/1.1 200 OK");
-//                    writer.println("Content-Type: text/html");
-//                    writer.println();
-//                    writer.println("<h1>File " + Path + "not found</h1>");
-//
-//            },
+            Files::notExists,
+            (Path, writer) -> {
+                    writer.println("HTTP/1.1 200 OK");
+                    writer.println("Content-Type: text/html");
+                    writer.println();
+                    writer.println("<h1>File " + Path + "not found</h1>");
+
+            },
 
 
             Files::isDirectory,
