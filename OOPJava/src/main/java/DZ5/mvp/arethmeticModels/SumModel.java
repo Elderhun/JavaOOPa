@@ -1,20 +1,20 @@
-package DZ5.mvp;
+package DZ5.mvp.arethmeticModels;
 
-public class SumModel {
+public final class SumModel extends Arethmetic {
 
-    private int first;
 
-    private int second;
-
+    @Override
     public void setFirst(int first) {
-        this.first = first;
+        super.setFirst(first);
     }
 
+    @Override
     public void setSecond(int second) {
-        this.second = second;
+        super.setSecond(second);
     }
 
-    public int getSum() {
+    @Override
+    public int getActionResult() {
         return first + second;
     }
 
@@ -23,19 +23,19 @@ public class SumModel {
 
         sumModel.setFirst(1);
         sumModel.setSecond(1);
-        if (sumModel.getSum() != 2) {
+        if (sumModel.getActionResult() != 2) {
             throw new AssertionError("Incorrect test result");
         }
 
         sumModel.setFirst(1);
         sumModel.setSecond(2);
-        if (sumModel.getSum() != 3) {
+        if (sumModel.getActionResult() != 3) {
             throw new AssertionError("Incorrect test result");
         }
 
         sumModel.setFirst(2);
         sumModel.setSecond(3);
-        if (sumModel.getSum() != 5) {
+        if (sumModel.getActionResult() != 5) {
             throw new AssertionError("Incorrect test result");
         }
     }

@@ -1,7 +1,6 @@
 package DZ5.mvp;
 
 import java.io.PrintStream;
-import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class ViewImpl implements View {
@@ -22,7 +21,7 @@ public class ViewImpl implements View {
     }
 
     @Override
-    public void print(String message) {
-        out.print(message);
+    public void print(String message, int res) {
+        out.print(message+res);
     }
 }
